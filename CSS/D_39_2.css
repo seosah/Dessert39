@@ -1,0 +1,426 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Pretendard-Regular';
+}
+
+a {
+  color: inherit;
+}
+
+/* header start */
+
+header {
+  height: 100px;
+}
+
+.inner {
+  display: flex;
+  width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+/* 1차 메뉴 */
+
+nav .menu {
+  display: flex;
+  justify-content: space-between;
+  background-color: lightcyan;
+}
+
+.menu .menu_ti {
+  line-height: 100px;
+  padding: 40px 50px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.gnb li {
+  position: relative;
+}
+
+.inner .util {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.util li a {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+
+.util img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.util li:first-child a img {
+  width: 65%;
+  height: 110%;
+}
+
+/* 2차 메뉴 */
+
+.menu li > .menu_in {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  background-color: lightgray;
+  opacity: 0;
+  transition: 0.5s;
+  visibility: hidden;
+}
+
+.menu:hover .menu_in {
+  height: 300px;
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+
+.menu .menu_in a {
+  display: block;
+  padding: 15px 35px;
+}
+
+/* header end */
+
+.logo {
+  width: 70px;
+  height: 100px;
+  line-height: 100px;
+  margin: 0 200px;
+}
+
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* main_visual start */
+
+.main_visual {
+  width: 1920px;
+  margin: 0 auto;
+}
+
+.main {
+  position: relative;
+}
+
+.main_visual .banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main_txt {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-20%, -50%);
+}
+
+.main_txt h2 {
+  font-size: 72px;
+}
+
+.main_txt p {
+  margin-top: 100px;
+  font-size: 24px;
+}
+
+/* main_visual end */
+
+/* eco_wrap start */
+
+.eco_wrap {
+  margin: 140px auto;
+}
+
+.eco_wrap .eco {
+  overflow-x: hidden;
+  background-color: #ececec;
+  border-top: 0.5px solid #105038;
+  border-bottom: 0.5px solid #105038;
+  height: 80px;
+  line-height: 80px;
+}
+
+.eco_txt {
+  display: flex;
+  white-space: nowrap;
+  gap: 100px;
+  animation: eco1 20s infinite linear;
+  color: #105038;
+  font-size: 20px;
+}
+
+@keyframes eco1 {
+  0% {
+    
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.eco_wrap .eco2 {
+  overflow-x: hidden;
+  margin: 10px 0;
+  background-color: #105038;
+  color: #ececec;
+  height: 80px;
+  line-height: 80px;
+}
+
+.eco2_txt {
+  white-space: nowrap;
+  font-size: 20px;
+  display: flex;
+  gap: 300px;
+  animation: eco2 20s infinite linear;
+}
+
+.eco2 p {
+  width: 100px;
+}
+
+@keyframes eco2 {
+  0% {}
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* eco_wrap end */
+
+
+
+/* dessert */
+
+.dessert {
+  width: 1440px;
+  margin: 140px auto;
+  text-align: center;
+  color: #333;
+}
+
+.dessert h3 {
+  display: inline-block;
+  font-size: 55px;
+  margin-bottom: 80px;
+}
+
+.dessert h3:nth-of-type(2) {
+  color: #105038;
+  margin-left: 10px;
+}
+
+.d_item_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item_img {
+  width: 220px;
+  background-color: #ececec;
+  border-radius: 15px;
+}
+
+.d_item img {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+}
+
+.item_name {
+  font-size: 20px;
+  margin-top: 30px;
+}
+
+/* dessert end */
+/* beverage */
+
+.beverage {
+  width: 1440px;
+  margin: 140px auto;
+  text-align: center;
+  color: #333;
+}
+
+.beverage h3 {
+  display: inline-block;
+  font-size: 55px;
+  margin-bottom: 80px;
+}
+
+.beverage h3:nth-of-type(2) {
+  color: #105038;
+  margin-left: 10px;
+}
+
+.b_item_wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.b_item img {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+}
+
+/* beverage end */
+
+/* intro */
+
+.intro {
+  width: 1440px;
+  margin: 140px auto;
+  color: #333;
+}
+
+.intro h3 {
+  font-size: 55px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.intro_item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.intro_item .left_wrap {
+  display: flex;
+  margin-left: 24px;
+  gap: 24px;
+}
+
+.intro_item .right_wrap .r_item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.right_wrap .r_item .store {
+  background-color: #ececec;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 35px;
+  gap: 50px;
+}
+
+.right_wrap .r_item .store_txt h4 {
+  color: #105038;
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.right_wrap .r_item .store_select {
+  display: flex;
+  margin: 0 auto;
+  height: 40px;
+  line-height: 40px;
+  gap: 12px;
+}
+
+.store_select ul {
+  background: url(../IMG/ICON/지역.png) 50px center / cover no-repeat;
+  background-size: 22px 22px;
+  width: 70px;
+  background-color: white;
+  border: 1px solid #8e8e8e;
+  padding-left: 10px;
+}
+
+.store_select input {
+  background: url(../IMG/ICON/돋보기.png) 180px center / cover no-repeat;
+  background-size: 22px 22px;
+  width: 200px;
+  background-color: white;
+  border: 1px solid #8e8e8e;
+  padding-left: 10px;
+}
+
+.Franchise {
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  background-color: #105038;
+  border-radius: 15px;
+  color: white;
+}
+
+/* intro end */
+
+/* event start */
+
+.event {
+  width: 1440px;
+  margin: 140px auto;
+  text-align: center;
+}
+
+.event h3 {
+  display: inline-block;
+  font-size: 55px;
+  margin-bottom: 80px;
+  color: #333;
+}
+
+.event span {
+  font-size: 55px;
+  font-weight: bold;
+  color: #105038;
+  margin: 0 10px;
+}
+
+.dessert h3:nth-of-type(2) {
+  color: #105038;
+  margin-left: 10px;
+}
+
+.event_item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.event_link a {
+  display: block;
+  width: 220px;
+  height: 60px;
+  line-height: 60px;
+  margin: 50px auto;
+  background-color: #105038;
+  color: #ececec;
+  font-size: 24px;
+  font-weight: 500;
+  border-radius: 30px;
+}
+
+/* event end */
